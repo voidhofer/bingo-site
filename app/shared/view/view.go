@@ -43,13 +43,15 @@ var (
 	viewInfo           View
 )
 
-// root and children templates
+// Template struct
+// Storing root and children templates.
 type Template struct {
 	Root     string   `json:"Root"`
 	Children []string `json:"Children"`
 }
 
-// view attributes
+// View Struct
+// Storing view attributes
 type View struct {
 	BaseURI   string
 	Extension string
@@ -66,16 +68,19 @@ type Flash struct {
 	Class   string
 }
 
+// Configure function
 // configure view info
 func Configure(vi View) {
 	viewInfo = vi
 }
 
+// ReadConfig function
 // return configuration
 func ReadConfig() View {
 	return viewInfo
 }
 
+// LoadTemplates function
 // set the root and child templates
 func LoadTemplates(rootTemp string, childTemps []string) {
 	rootTemplate = rootTemp

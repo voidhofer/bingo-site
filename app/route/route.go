@@ -50,7 +50,8 @@ func redirectToHTTPS(w http.ResponseWriter, req *http.Request) {
 // Routes
 // *****************************************************************************
 
-// Declare HostSwitch type
+// HostSwitch map
+// It is used to serve multiple domains with different routing.
 type HostSwitch map[string]http.Handler
 
 // ServeHTTP method for HostSwitch
@@ -78,21 +79,20 @@ func getHost(r *http.Request) string {
 			host = host[:i]
 		}
 		return host
-	} else {
-		host := r.Host
-		if n := strings.Index(host, "www."); n != -1 {
-			host = host[4:]
-		}
-		// Slice off any port information.
-		if i := strings.Index(host, ":"); i != -1 {
-			if i2 := strings.Index(host, "/"); i2 != -1 {
-				host = host[:i] + host[i2:]
-			} else {
-				host = host[:i]
-			}
-		}
-		return host
 	}
+	host := r.Host
+	if n := strings.Index(host, "www."); n != -1 {
+		host = host[4:]
+	}
+	// Slice off any port information.
+	if i := strings.Index(host, ":"); i != -1 {
+		if i2 := strings.Index(host, "/"); i2 != -1 {
+			host = host[:i] + host[i2:]
+		} else {
+			host = host[:i]
+		}
+	}
+	return host
 }
 
 // routes lists the available urls
