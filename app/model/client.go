@@ -41,7 +41,7 @@ func ClientByEmail(email string) (Client, error) {
 }
 
 // ClientCreate creates new user record in DB
-// temporarly disabled: ', phone, group, preflang, company, taxnum, country, state, city, district, postcode, address, pdtype, house, floor, door, dcompany, dcountry, dstate, dcity, ddistrict, dpostcode, daddress, dpdtype, dhouse, dfloor, ddoor string, promotions bool'
+// temporary disabled: ', phone, group, preflang, company, taxnum, country, state, city, district, postcode, address, pdtype, house, floor, door, dcompany, dcountry, dstate, dcity, ddistrict, dpostcode, daddress, dpdtype, dhouse, dfloor, ddoor string, promotions bool'
 func ClientCreate(firstName, lastName, email, password string) error {
 	var err error
 	if database.CheckConnection() {

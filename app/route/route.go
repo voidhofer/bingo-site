@@ -93,7 +93,6 @@ func getHost(r *http.Request) string {
 		}
 		return host
 	}
-	return r.URL.Host
 }
 
 // routes lists the available urls
