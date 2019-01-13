@@ -1,0 +1,47 @@
+{
+	"Database": {
+		"MongoDB": {
+			"URL": "127.0.0.1",
+			"Database": "bingo"
+		}
+	},
+	"Recaptcha": {
+		"Enabled": false,
+		"Secret": "",
+		"SiteKey": ""
+	},
+	"Server": {
+		"Hostname": "",
+		"UseHTTP": true,
+		"UseHTTPS": false,
+		"HTTPPort": 80,
+		"HTTPSPort": 443,
+		"CertFile": "static/tls/domain.crt",
+		"KeyFile": "static/tls/domain.key"
+	},
+	"Session": {
+		"SecretKey": "VKh37w&=2dqZ&CS3NJaEEf@X?32W3qpr",
+		"Name": "SESSI0N",
+		"Options": {
+			"Path": "/",
+			"Domain": "",
+			"MaxAge": 28800,
+			"Secure": false,
+			"HttpOnly": false
+		}
+	},
+	"Template": {
+		"Root": "base",
+		"Children": [
+			"partial/menu",
+			"partial/footer"
+		]
+	},
+	"View": {
+		"BaseURI": "/",
+		"Extension": "tmpl",
+		"Name": "blank",
+		"Folder": "static/template",
+		"Caching": false
+	}
+}

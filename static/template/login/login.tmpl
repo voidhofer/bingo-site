@@ -1,0 +1,71 @@
+{{define "title"}}Login{{end}}
+{{define "head"}}{{JS "//www.google.com/recaptcha/api.js"}}{{end}}
+{{define "content"}}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="page-header">
+				<h2>Login</h2>
+			</div>
+			<form method="post">
+				<div class="form-group">
+					<label for="email">Email</label>
+					<div><input type="email" class="form-control" id="email" name="email" maxlength="48" placeholder="Email" value="{{.email}}" /></div>
+				</div>
+				
+				<div class="form-group">
+					<label for="password">Password</label>
+					<div><input type="password" class="form-control" id="password" name="password" maxlength="48" placeholder="Password" value="{{.password}}" /></div>
+				</div>
+				
+				<center>
+					<input type="submit" value="Login" class="btn btn-primary" />
+				</center>
+				
+				<input type="hidden" name="token" value="{{.token}}">
+			</form>
+		</div>
+		<div class="col-md-6">
+			<div class="page-header">
+				<h2>Register</h2>
+			</div>
+			<form method="post" action="register">
+				
+				<div class="form-group">
+					<label for="last_name">Last name</label>
+					<div><input type="text" class="form-control" id="last_name" name="last_name" maxlength="48" placeholder="Last name" value="{{.last_name}}" /></div>
+				</div>
+				
+				<div class="form-group">
+					<label for="first_name">First name</label>
+					<div><input type="text" class="form-control" id="first_name" name="first_name" maxlength="48" placeholder="First name" value="{{.first_name}}" /></div>
+				</div>
+				
+				<div class="form-group">
+					<label for="email">Email</label>
+					<div><input type="email" class="form-control" id="email" name="email" maxlength="48" placeholder="Email" value="{{.email}}" /></div>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label><div>
+					<input type="password" class="form-control" id="password" name="password" maxlength="48" placeholder="Password" value="{{.password}}" />	</div>
+				</div>
+				<div class="form-group">
+					<label for="password_verify">Verify password</label>
+					<div><input type="password" class="form-control" id="password_verify" name="password_verify" maxlength="48" placeholder="Password" value="{{.password}}" /></div>
+				</div>
+				
+				{{if RECAPTCHA_SITEKEY}}
+				<div class="g-recaptcha" data-sitekey="{{RECAPTCHA_SITEKEY}}" style="margin-bottom: 1rem;"></div>
+				{{end}}
+				<center>
+					<input type="submit" value="Register" class="btn btn-primary" />
+				</center>
+				<input type="hidden" name="token" value="{{.token}}">
+			</form>
+		</div>
+	</div>
+</div>
+
+{{end}}
+{{define "foot"}}{{end}}
