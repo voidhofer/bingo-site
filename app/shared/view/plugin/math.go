@@ -12,14 +12,14 @@ func Math() template.FuncMap {
 	f["MATH"] = func(i1 int, mod int, i2 int) int {
 		var result int
 		switch mod {
-			case 0:
-				result = (i1 + i2)
-			case 1:
-				result = (i1 - i2)
-			case 2:
-				result = (i1 * i2)
-			case 3:
-				result = int(i1 / i2)
+		case 0:
+			result = (i1 + i2)
+		case 1:
+			result = (i1 - i2)
+		case 2:
+			result = (i1 * i2)
+		case 3:
+			result = int(i1 / i2)
 		}
 		return result
 	}
