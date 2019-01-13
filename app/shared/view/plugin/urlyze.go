@@ -2,13 +2,13 @@ package plugin
 
 import (
 	"html/template"
-	"strings"
-	"regexp"
 	"log"
+	"regexp"
+	"strings"
 )
 
-// Math returns a template.FuncMap
-// * MATH is a plugin to do math in templates
+// URLyze returns a template.FuncMap
+// * Returns URLyzed version of strings
 func URLyze() template.FuncMap {
 	f := make(template.FuncMap)
 
@@ -27,10 +27,10 @@ func URLyze() template.FuncMap {
 		text = strings.Replace(text, " ", "_", -1)
 		text = strings.Replace(text, "-", "_", -1)
 		reg, err := regexp.Compile("[^a-zA-Z0-9]+")
-	    if err != nil {
-	        log.Fatal(err)
-	    }
-	    result = reg.ReplaceAllString(text, "")
+		if err != nil {
+			log.Fatal(err)
+		}
+		result = reg.ReplaceAllString(text, "")
 		return result
 	}
 

@@ -5,8 +5,8 @@ import (
 	"strings"
 )
 
-// Math returns a template.FuncMap
-// * MATH is a plugin to do math in templates
+// Uppercase returns a template.FuncMap
+// * returns uppercase version of string
 func Uppercase() template.FuncMap {
 	f := make(template.FuncMap)
 
