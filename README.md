@@ -24,7 +24,14 @@ The program can run in both HTTP and HTTPS mode and it support multiple TLS keys
 Since this is a hobby project it is disencouraged to use it in production.
 The software comes AS IT IS. There is no support for this software and there will not be no frequent updates, so it might get vulnerable/slow/deprecated as it gets outdated!
 
-## Authors
+## Author
+            .__    .___.__            _____             
+___  ______ |__| __| _/|  |__   _____/ ____\___________ 
+\  \/ /  _ \|  |/ __ | |  |  \ /  _ \   __\/ __ \_  __ \
+ \   (  <_> )  / /_/ | |   Y  (  <_> )  | \  ___/|  | \/
+  \_/ \____/|__\____ | |___|  /\____/|__|  \___  >__|   
+                    \/      \/                 \/       
+		    
 [voidhofer](github.com/voidhofer) - [voidhofer.github.io](https://voidhofer.github.io)
 
 ## Installing with go get
