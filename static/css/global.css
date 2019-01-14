@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.main-container {
+    padding-top: 0px !important;
+    min-height: calc(100vh - 100px);
+}

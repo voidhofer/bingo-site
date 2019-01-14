@@ -12,7 +12,6 @@ import (
 	"path/filepath"
 	"strings"
 	"sync"
-	"time"
 
 	// local imports
 	"github.com/voidhofer/bingo-site/app/shared/session"
@@ -118,6 +117,15 @@ func New(req *http.Request) *View {
 	v := &View{}
 	v.Vars = make(map[string]interface{})
 	v.Vars["AuthLevel"] = "anon"
+	// Get session
+	v.BaseURI = viewInfo.BaseURI
+	v.Extension = viewInfo.Extension
+	v.Name = viewInfo.Name
+	v.Folder = viewInfo.Folder
+	// Make sure BaseURI is available in the templates
+	v.Vars["BaseURI"] = v.BaseURI
+	// Make sure BaseURI is available in the templates
+	v.Vars["BaseURI"] = v.BaseURI
 	// This is required for the view to access the request
 	v.request = req
 	// Get session
@@ -126,15 +134,7 @@ func New(req *http.Request) *View {
 	if sess.Values["id"] != nil {
 		v.Vars["AuthLevel"] = "auth"
 	}
-	// Get session
-	v.BaseURI = viewInfo.BaseURI
-	v.Extension = viewInfo.Extension
-	v.Name = viewInfo.Name
-	v.Folder = viewInfo.Folder
-	// Make sure BaseURI is available in the templates
-	v.Vars["BaseURI"] = v.BaseURI
-	t := time.Now()
-	v.Vars["ThisYear"] = t.Year()
+
 	return v
 }
 

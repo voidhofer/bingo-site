@@ -1,28 +1,58 @@
 {{define "menu"}}
 {{if eq .AuthLevel "auth"}}
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-	  <div class="navbar-header">
-		<a class="navbar-brand" href="#">BonGO Site</a>
-	  </div>
-	  <ul class="nav navbar-nav">
-		<li class="active"><a href="/">Home</a></li>
-		<li><a href="/services">Services</a></li>
-		<li><a href="/about">Contact</a></li>
-	  </ul>
-	</div>
-	</nav>
-	{{else}}
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			<a class="navbar-brand" href="#">BonGO Site</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+						<h2>BinGO</h2>
+					</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="/">Home
+									<span class="sr-only">(current)</span>
+								</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/logout">Logout</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/about">Contact</a>
+					</li>
+				</ul>
 			</div>
-			<ul class="nav navbar-nav">
-			<li class="active"><a href="/">Home</a></li>
-			<li><a href="/about">Contact</a></li>
-			</ul>
 		</div>
-		</nav>
-	{{end}}
+	</nav>
+{{else}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+						<h2>BinGO</h2>
+					</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="/">Home
+									<span class="sr-only">(current)</span>
+								</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="/memberarea">Member Area</a>
+						</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/login">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/about">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+{{end}}
 {{end}}
