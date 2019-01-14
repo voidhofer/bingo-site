@@ -2,7 +2,7 @@
 // This package is the base of BinGO-Site.
 // It inlcudes all the needed packages to build the webserver.
 
-package bingosite
+package main
 
 import (
 	// base core pkg
@@ -32,7 +32,7 @@ func init() {
 // bingosite is the starter function of bingosite package
 // It loads the configuration file which is a json file called config.json located in static/config directory.
 // The information from the config file gets injected into session, recaptcha, view and server packages.
-func bingosite() {
+func main() {
 	// load config file
 	jsonconfig.Load("static"+string(os.PathSeparator)+"config"+string(os.PathSeparator)+"config.json", config)
 	// configure session cookie store
