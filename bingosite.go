@@ -1,4 +1,4 @@
-// bingosite is a simple but powerful webapp written in go.
+// BinGO-Site is a simple but powerful webapp written in go.
 // This package is the base of BinGO-Site.
 // It inlcudes all the needed packages to build the webserver.
 
@@ -29,7 +29,7 @@ func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
-// bingosite is the starter function of bingosite package
+// main is the starter function of bingosite package
 // It loads the configuration file which is a json file called config.json located in static/config directory.
 // The information from the config file gets injected into session, recaptcha, view and server packages.
 func main() {
