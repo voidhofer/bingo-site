@@ -72,14 +72,14 @@ chmod +x ./bingo-site
 ```
 "Database": {
 	"MongoDB": {
-		"URL": "127.0.0.1",                          // SET MongoDB host (Usually 127.0.0.1 - localhost)
+		"URL": "127.0.0.1",                          // SET MongoDB host (Usually 127.0.0.1)
 		"Database": "bingo"                          // SET database name
 	}
 },
 "Recaptcha": {
 	"Enabled": false,                                    // ENABLE recaptcha
-	"Secret": "",                                        // SET secret (the one you get from google)
-	"SiteKey": ""                                        // SET sitekey (the one you get from google)
+	"Secret": "",                                        // SET secret
+	"SiteKey": ""                                        // SET sitekey
 },
 "Server": {
 	"Hostname": "",                                      // SET hostname (not necessary)
@@ -87,8 +87,8 @@ chmod +x ./bingo-site
 	"UseHTTPS": false,                                   // ENABLE HTTPS
 	"HTTPPort": 80,                                      // SET HTTP port
 	"HTTPSPort": 443,                                    // SET HTTPS port
-	"CertFile": "static/tls/domain.crt",                 // SET TLS Cert File (only for single domain use!)
-	"KeyFile": "static/tls/domain.key"                   // SET TLS Key File (only for single domain use!)
+	"CertFile": "static/tls/domain.crt",                 // SET TLS Cert File (single domain)
+	"KeyFile": "static/tls/domain.key"                   // SET TLS Key File (single domain)
 },
 "Session": {
 	"SecretKey": "VKh37w&=2dqZ&CS3NJaEEf@X?32W3qpr",     // SET session key
