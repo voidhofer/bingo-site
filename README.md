@@ -4,7 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/voidhofer/bingo-site)](https://goreportcard.com/report/github.com/voidhofer/bingo-site) [![GoDoc](https://godoc.org/github.com/voidhofer/bingo-site?status.svg)](https://godoc.org/github.com/voidhofer/bingo-site) 
 
 ## What is BinGO Site?
-A simple but powerful golang website framework (kindof).
+A simple but powerful web application written in golang.
 
 This site is capable of serving multiple domains with different routing for each domain.
 The program can run in both HTTP and HTTPS mode and it support multiple TLS keys for multiple domains.
