@@ -46,7 +46,7 @@ go build
 ```
 
 ## Configuration
-```json
+```
 {
 	"Database": {
 		"MongoDB": {
@@ -105,6 +105,7 @@ var domain3 = "example3.com"
 
 Then create an httprouter for each domain:
 ```go
+// Creating httprouters for each domain
 r1 := httprouter.New()
 r2 := httprouter.New()
 r3 := httprouter.New()
@@ -112,15 +113,15 @@ r3 := httprouter.New()
 
 Add routing rules for all domains:
 ```go
-// about for example1.com
+// Serve /about for example1.com
 	r1.GET("/about", hr.Handler(alice.
 		New().
 		ThenFunc(controller.AboutGET)))
-// about for example2.com
+// Serve /about for example2.com
 	r2.GET("/about", hr.Handler(alice.
 		New().
 		ThenFunc(controller.AboutGET2)))
-// about for example3.com
+// Serve /about for example3.com
 	r3.GET("/about", hr.Handler(alice.
 		New().
         ThenFunc(controller.AboutGET2)))    // You can use the same controller for multiple routing rules
@@ -136,16 +137,21 @@ Add the httproutes to hostswitch map:
 
 At last in app/shared/server/server.go you can add multiple tls configurations (if HTTPS is enabled):
 ```go
+    // Setting tls conf for domain1
 	cert, err1 := tls.LoadX509KeyPair("static/tls/domain.crt", "static/tls/domain.key")
 	if err1 != nil {
 		log.Fatal(err1)
-	}
-	cfg.Certificates = append(cfg.Certificates, cert)
+    }
+    // Appending key and crt for cfg.Certificates (domain1)
+    cfg.Certificates = append(cfg.Certificates, cert)
+    // Setting tls conf for domain2
     cert2, err2 := tls.LoadX509KeyPair("static/tls/domain2.crt", "static/tls/domain2.key")
 	if err2 != nil {
 		log.Fatal(err2)
-	}
-	cfg.Certificates = append(cfg.Certificates, cert2)
+    }
+    // Appending key and crt for cfg.Certificates (domain2)
+    cfg.Certificates = append(cfg.Certificates, cert2)
+    // ...
 ```
 
 ## Built with:
