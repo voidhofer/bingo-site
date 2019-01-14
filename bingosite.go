@@ -1,3 +1,7 @@
+// bingosite is a simple but powerful webapp written in go.
+// This package is the base of BinGO-Site.
+// It inlcudes all the needed packages to build the webserver.
+
 package bingosite
 
 import (
@@ -17,6 +21,7 @@ import (
 	"github.com/voidhofer/bingo_site/app/shared/view/plugin"
 )
 
+// init sets log flags and allows more CPU core usage
 func init() {
 	// set log flags
 	log.SetFlags(log.Lshortfile)
@@ -24,6 +29,9 @@ func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
+// bingosite is the starter function of bingosite package
+// It loads the configuration file which is a json file called config.json located in static/config directory.
+// The information from the config file gets injected into session, recaptcha, view and server packages.
 func bingosite() {
 	// load config file
 	jsonconfig.Load("static"+string(os.PathSeparator)+"config"+string(os.PathSeparator)+"config.json", config)
@@ -50,6 +58,7 @@ func bingosite() {
 var config = &configuration{}
 
 // configuration struct
+// Holds all the needed information for bingosite function to configure packages.
 type configuration struct {
 	Recaptcha recaptcha.Info  `json:"Recaptcha"`
 	Server    server.Server   `json:"Server"`
@@ -58,7 +67,7 @@ type configuration struct {
 	View      view.View       `json:"View"`
 }
 
-// bytes to structs
+// ParseJSON returns configuration object filled with data retrieved from input.
 func (c *configuration) ParseJSON(b []byte) error {
 	return json.Unmarshal(b, &c)
 }
