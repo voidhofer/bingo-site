@@ -20,11 +20,9 @@ The program can run in both HTTP and HTTPS mode and it support multiple TLS keys
 - Google ReCaptcha support by Haisum
 - Example templates built with Bootstrap (source included for local hosting)
 
-
-
 ## Warning!
 Since this is a hobby project it is disencouraged to use it in production.
-The software comes AS IS. There is no support for this software and it will not be updated frequently, so it might get vulnerable/slow/deprecated as it gets outdated!
+The software comes AS IT IS. There is no support for this software and there will not be no frequent updates, so it might get vulnerable/slow/deprecated as it gets outdated!
 
 ## Installing
 Just simply go get the project and run 'go build' in its folder.
