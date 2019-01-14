@@ -27,7 +27,7 @@ The software comes AS IT IS. There is no support for this software and there wil
 ## Authors
 [voidhofer](github.com/voidhofer) - [voidhofer.github.io](https://voidhofer.github.io)
 
-## Installing
+## Installing with go get
 Just simply go get the project and run 'go build' in its folder.
 ```bash
 go get github.com/voidhofer/bingo-site
@@ -35,8 +35,7 @@ cd $GOPATH/src/github.com/voidhofer/bingo-site
 go build
 ```
 
-- or -
-
+## Installing with git
 You can also download or clone the project from github, move it to your $GOPATH and build it.
 ```bash
 cd $GOPATH
@@ -46,6 +45,27 @@ cd voidhofer
 git clone https://github.com/voidhofer/bingo-site.git
 cd bingo-site
 go build
+```
+
+## Preparing run folder
+After you built the package you can move the compiled file to wherever you like just make sure to copy static folder with it. Static folder contains your config file, tempaltes, js and css files, tls keys, images and favicons. After your web app folder is set up you can run the executable.
+
+## Running on linux:
+You should add execution permission to the executable:
+```bash
+chmod +x ./bingo-site
+./bingo-site
+```
+
+## Running on Windows:
+You might need to run as administrator priviledges.
+
+## Running on OS X:
+You should add execution permission to the executable just like linux users.
+When you run the executable a popup will be presented. Allow the program to bind to HTTP/HTTPS ports.
+```bash
+chmod +x ./bingo-site
+./bingo-site
 ```
 
 ## Configuration
