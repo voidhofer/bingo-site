@@ -147,8 +147,8 @@ r2.GET("/about", hr.Handler(alice.
 	ThenFunc(controller.AboutGET2)))
 // Serve /about for example3.com
 r3.GET("/about", hr.Handler(alice.
-	New().
-       	ThenFunc(controller.AboutGET2)))    // You can use the same controller for multiple routing rules
+	New().				    // You can use the same 
+	ThenFunc(controller.AboutGET2)))    // controller for multiple routing rules
 ```
 
 Add the httproutes to hostswitch map:
