@@ -117,8 +117,15 @@ func (v *View) PrependBaseURI(s string) string {
 func New(req *http.Request) *View {
 	v := &View{}
 	v.Vars = make(map[string]interface{})
+	v.Vars["AuthLevel"] = "anon"
 	// This is required for the view to access the request
 	v.request = req
+	// Get session
+	sess := session.Instance(v.request)
+	// Set the AuthLevel to auth if the user is logged in
+	if sess.Values["id"] != nil {
+		v.Vars["AuthLevel"] = "auth"
+	}
 	// Get session
 	v.BaseURI = viewInfo.BaseURI
 	v.Extension = viewInfo.Extension
