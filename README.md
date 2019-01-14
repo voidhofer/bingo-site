@@ -2,6 +2,7 @@
 # BinGO Site
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/voidhofer/bingo-site)](https://goreportcard.com/report/github.com/voidhofer/bingo-site) [![GoDoc](https://godoc.org/github.com/voidhofer/bingo-site?status.svg)](https://godoc.org/github.com/voidhofer/bingo-site) [![Build Status](https://travis-ci.org/voidhofer/bingo-site.svg?branch=master)](https://travis-ci.org/voidhofer/bingo-site)
+
 ## What is BinGO Site?
 A simple but powerful web application written in golang.
 
