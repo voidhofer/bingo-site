@@ -98,7 +98,7 @@ func LoginPOST(w http.ResponseWriter, r *http.Request) {
 			sess.Values["email"] = email
 			sess.Values["first_name"] = result.FirstName
 			sess.Save(r, w)
-			http.Redirect(w, r, "/environment/data", http.StatusFound)
+			http.Redirect(w, r, "/", http.StatusFound)
 			return
 		}
 	} else {

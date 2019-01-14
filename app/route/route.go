@@ -8,6 +8,7 @@ import (
 
 	// local imports
 	"github.com/voidhofer/bingo-site/app/controller"
+	"github.com/voidhofer/bingo-site/app/shared/middleware/acl"
 	hr "github.com/voidhofer/bingo-site/app/shared/middleware/httprouterwrapper"
 	"github.com/voidhofer/bingo-site/app/shared/middleware/logrequest"
 	"github.com/voidhofer/bingo-site/app/shared/session"
@@ -115,12 +116,15 @@ func routes() *HostSwitch {
 		ThenFunc(controller.Error404)
 	// login/register page
 	r.GET("/login", hr.Handler(alice.
-		New().
+		New(acl.DisallowAuth).
 		ThenFunc(controller.LoginGET)))
 	// login post
 	r.POST("/login", hr.Handler(alice.
-		New().
+		New(acl.DisallowAuth).
 		ThenFunc(controller.LoginPOST)))
+	r.GET("/logout", hr.Handler(alice.
+		New(acl.DisallowAnon).
+		ThenFunc(controller.LogoutGET)))
 	// register post
 	r.POST("/register", hr.Handler(alice.
 		New().
@@ -129,6 +133,10 @@ func routes() *HostSwitch {
 	r.GET("/about", hr.Handler(alice.
 		New().
 		ThenFunc(controller.AboutGET)))
+	// member area
+	r.GET("/memberarea", hr.Handler(alice.
+		New(acl.DisallowAnon).
+		ThenFunc(controller.MemberAreaGET)))
 	// set hostswitch value for routes
 	hs[domain1] = r
 	// respond

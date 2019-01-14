@@ -2,10 +2,33 @@
 {{define "head"}}{{end}}
 {{define "content"}}
 <div class="container">
-	<div class="page-header">
-		<h1>{{template "title" .}}</h1>
-	</div>
-	<p>Click {{LINK "login" "HERE"}} to login!</p>
-</div>
-{{end}}
+	<div id="demo" class="carousel slide" data-ride="carousel" style="max-height: 500px;">
+
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+			</ul>
+		
+			<!-- The slideshow -->
+			<div class="carousel-inner" style="height: 100%">
+			<div class="carousel-item active">
+				<img src="static/img/slice1.jpg" style="height: auto; width: 100%;" alt="Image #1">
+			</div>
+			<div class="carousel-item">
+				<img src="static/img/slice2.jpg" style="height: auto; width: 100%;" alt="Image #2">
+			</div>
+			</div>
+		
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+			</a>
+		
+		</div>
+		</div>
+		{{end}}
 {{define "foot"}}{{end}}
