@@ -121,6 +121,7 @@ chmod +x ./bingo-site
 ## Multiple domain with multiple TLS config
 Add domain in app/route/route.go like this:
 ```go
+// Setting domains
 var domain1 = "example1.com"
 var domain2 = "example2.com"
 var domain3 = "example3.com"
@@ -137,44 +138,44 @@ r3 := httprouter.New()
 Add routing rules for all domains:
 ```go
 // Serve /about for example1.com
-	r1.GET("/about", hr.Handler(alice.
-		New().
-		ThenFunc(controller.AboutGET)))
+r1.GET("/about", hr.Handler(alice.
+	New().
+	ThenFunc(controller.AboutGET)))
 // Serve /about for example2.com
-	r2.GET("/about", hr.Handler(alice.
-		New().
-		ThenFunc(controller.AboutGET2)))
+r2.GET("/about", hr.Handler(alice.
+	New().
+	ThenFunc(controller.AboutGET2)))
 // Serve /about for example3.com
-	r3.GET("/about", hr.Handler(alice.
-		New().
-        ThenFunc(controller.AboutGET2)))    // You can use the same controller for multiple routing rules
+r3.GET("/about", hr.Handler(alice.
+	New().
+       	ThenFunc(controller.AboutGET2)))    // You can use the same controller for multiple routing rules
 ```
 
 Add the httproutes to hostswitch map:
 ```go
 // set hostswitch value for routes
-    hs[domain1] = r1
-    hs[domain2] = r2
-    hs[domain3] = r3
+hs[domain1] = r1
+hs[domain2] = r2
+hs[domain3] = r3
 ```
 
 At last in app/shared/server/server.go you can add multiple tls configurations (if HTTPS is enabled):
 ```go
-    // Setting tls conf for domain1
-	cert, err1 := tls.LoadX509KeyPair("static/tls/domain.crt", "static/tls/domain.key")
-	if err1 != nil {
-		log.Fatal(err1)
-    }
-    // Appending key and crt for cfg.Certificates (domain1)
-    cfg.Certificates = append(cfg.Certificates, cert)
-    // Setting tls conf for domain2
-    cert2, err2 := tls.LoadX509KeyPair("static/tls/domain2.crt", "static/tls/domain2.key")
-	if err2 != nil {
-		log.Fatal(err2)
-    }
-    // Appending key and crt for cfg.Certificates (domain2)
-    cfg.Certificates = append(cfg.Certificates, cert2)
-    // ...
+// Setting tls conf for domain1
+cert, err1 := tls.LoadX509KeyPair("static/tls/domain.crt", "static/tls/domain.key")
+if err1 != nil {
+	log.Fatal(err1)
+}
+// Appending key and crt for cfg.Certificates (domain1)
+cfg.Certificates = append(cfg.Certificates, cert)
+// Setting tls conf for domain2
+cert2, err2 := tls.LoadX509KeyPair("static/tls/domain2.crt", "static/tls/domain2.key")
+if err2 != nil {
+	log.Fatal(err2)
+}
+// Appending key and crt for cfg.Certificates (domain2)
+cfg.Certificates = append(cfg.Certificates, cert2)
+// ...
 ```
 
 ## Built with:
