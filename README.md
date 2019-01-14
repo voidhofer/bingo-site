@@ -70,51 +70,49 @@ chmod +x ./bingo-site
 
 ## Configuration
 ```
-{
-	"Database": {
-		"MongoDB": {
-			"URL": "127.0.0.1",                          // SET MongoDB host (Usually 127.0.0.1 - localhost)
-			"Database": "bingo"                          // SET database name
-		}
-	},
-	"Recaptcha": {
-		"Enabled": false,                                    // ENABLE recaptcha
-		"Secret": "",                                        // SET secret (the one you get from google)
-		"SiteKey": ""                                        // SET sitekey (the one you get from google)
-	},
-	"Server": {
-		"Hostname": "",                                      // SET hostname (not necessary)
-		"UseHTTP": true,                                     // ENABLE HTTP
-		"UseHTTPS": false,                                   // ENABLE HTTPS
-		"HTTPPort": 80,                                      // SET HTTP port
-		"HTTPSPort": 443,                                    // SET HTTPS port
-		"CertFile": "static/tls/domain.crt",                 // SET TLS Cert File (only for single domain use!)
-		"KeyFile": "static/tls/domain.key"                   // SET TLS Key File (only for single domain use!)
-	},
-	"Session": {
-		"SecretKey": "VKh37w&=2dqZ&CS3NJaEEf@X?32W3qpr",     // SET session key
-		"Name": "SESSI0N",                                   // SET session name
-		"Options": {
-			"Path": "/",                                 // SET Cookie scope
-			"Domain": "",                                // SET Cookie domain
-			"MaxAge": 28800,                             // SET Max-age
-			"Secure": false,                             // ENABLE SECURE
-			"HttpOnly": false                            // ENABLE HTTP
-		}
-	},
-	"Template": {
-		"Root": "base",                                      // SET main template
-		"Children": [            
-			"partial/menu",				     // SET partial templates (add everything
-			"partial/footer"			     // you want to use on multiple pages)
-		]
-	},
-	"View": {
-		"BaseURI": "/",                                      // SET BaseURI
-		"Extension": "tmpl",                                 // SET template extension
-		"Folder": "static/template",                         // SET template folder
-		"Caching": false                                     // ENABLE caching
+"Database": {
+	"MongoDB": {
+		"URL": "127.0.0.1",                          // SET MongoDB host (Usually 127.0.0.1 - localhost)
+		"Database": "bingo"                          // SET database name
 	}
+},
+"Recaptcha": {
+	"Enabled": false,                                    // ENABLE recaptcha
+	"Secret": "",                                        // SET secret (the one you get from google)
+	"SiteKey": ""                                        // SET sitekey (the one you get from google)
+},
+"Server": {
+	"Hostname": "",                                      // SET hostname (not necessary)
+	"UseHTTP": true,                                     // ENABLE HTTP
+	"UseHTTPS": false,                                   // ENABLE HTTPS
+	"HTTPPort": 80,                                      // SET HTTP port
+	"HTTPSPort": 443,                                    // SET HTTPS port
+	"CertFile": "static/tls/domain.crt",                 // SET TLS Cert File (only for single domain use!)
+	"KeyFile": "static/tls/domain.key"                   // SET TLS Key File (only for single domain use!)
+},
+"Session": {
+	"SecretKey": "VKh37w&=2dqZ&CS3NJaEEf@X?32W3qpr",     // SET session key
+	"Name": "SESSI0N",                                   // SET session name
+	"Options": {
+		"Path": "/",                                 // SET Cookie scope
+		"Domain": "",                                // SET Cookie domain
+		"MaxAge": 28800,                             // SET Max-age
+		"Secure": false,                             // ENABLE SECURE
+		"HttpOnly": false                            // ENABLE HTTP
+	}
+},
+"Template": {
+	"Root": "base",                                      // SET main template
+	"Children": [            
+		"partial/menu",				     // SET partial templates (add everything
+		"partial/footer"			     // you want to use on multiple pages)
+	]
+},
+"View": {
+	"BaseURI": "/",                                      // SET BaseURI
+	"Extension": "tmpl",                                 // SET template extension
+	"Folder": "static/template",                         // SET template folder
+	"Caching": false                                     // ENABLE caching
 }
 ```
 
