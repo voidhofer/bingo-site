@@ -24,6 +24,9 @@ The program can run in both HTTP and HTTPS mode and it support multiple TLS keys
 Since this is a hobby project it is disencouraged to use it in production.
 The software comes AS IT IS. There is no support for this software and there will not be no frequent updates, so it might get vulnerable/slow/deprecated as it gets outdated!
 
+## Authors
+[voidhofer](github.com/voidhofer) - [voidhofer.github.io](https://voidhofer.github.io)
+
 ## Installing
 Just simply go get the project and run 'go build' in its folder.
 ```bash
@@ -171,4 +174,5 @@ At last in app/shared/server/server.go you can add multiple tls configurations (
 ## Acknowledgments: 
 This project was inspired by Joseph Spurrier's blog post about creating Go web applications.
 I used some of his packages and change them a little bit so they fit my needs. I would suggest you all to read his article and take a look at his github because he did an excelent job explaining his concept of golang web development.
+
 [Joseph Spurrier's blog post - Go Web App Example](http://www.josephspurrier.com/go-web-app-example/)
