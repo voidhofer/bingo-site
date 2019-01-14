@@ -1,6 +1,6 @@
 // BinGO-Site is a simple but powerful webapp written in go.
 // This package is the base of BinGO-Site.
-// It inlcudes all the needed packages to build the webserver.
+// It includes all the needed packages to build the webserver.
 
 package main
 

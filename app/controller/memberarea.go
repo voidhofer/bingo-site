@@ -6,7 +6,7 @@ import (
 	"github.com/voidhofer/bingo-site/app/shared/view"
 )
 
-// AboutGET displays the About page
+// MemberAreaGET displays protected area page
 func MemberAreaGET(w http.ResponseWriter, r *http.Request) {
 	// Display the view
 	v := view.New(r)
