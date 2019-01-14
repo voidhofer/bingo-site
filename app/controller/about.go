@@ -3,7 +3,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/voidhofer/bingo_site/app/shared/view"
+	"github.com/voidhofer/bingo-site/app/shared/view"
 )
 
 // AboutGET displays the About page

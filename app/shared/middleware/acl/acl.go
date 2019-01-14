@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/voidhofer/bingo_site/app/shared/session"
+	"github.com/voidhofer/bingo-site/app/shared/session"
 )
 
 // DisallowAuth does not allow authenticated users to access the page

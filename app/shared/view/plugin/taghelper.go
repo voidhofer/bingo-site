@@ -6,7 +6,7 @@ import (
 	"log"
 
 	// local imports
-	"github.com/voidhofer/bingo_site/app/shared/view"
+	"github.com/voidhofer/bingo-site/app/shared/view"
 )
 
 // TagHelper returns a template.FuncMap

@@ -2,7 +2,7 @@ package model
 
 import (
 	// local imports
-	"github.com/voidhofer/bingo_site/app/shared/database"
+	"github.com/voidhofer/bingo-site/app/shared/database"
 	// external imports
 	"gopkg.in/mgo.v2/bson"
 )

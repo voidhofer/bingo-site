@@ -3,8 +3,8 @@ package controller
 import (
 	"net/http"
 
-	"github.com/voidhofer/bingo_site/app/shared/session"
-	"github.com/voidhofer/bingo_site/app/shared/view"
+	"github.com/voidhofer/bingo-site/app/shared/session"
+	"github.com/voidhofer/bingo-site/app/shared/view"
 )
 
 // IndexGET displays the home page

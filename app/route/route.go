@@ -7,10 +7,10 @@ import (
 	"strings"
 
 	// local imports
-	"github.com/voidhofer/bingo_site/app/controller"
-	hr "github.com/voidhofer/bingo_site/app/shared/middleware/httprouterwrapper"
-	"github.com/voidhofer/bingo_site/app/shared/middleware/logrequest"
-	"github.com/voidhofer/bingo_site/app/shared/session"
+	"github.com/voidhofer/bingo-site/app/controller"
+	hr "github.com/voidhofer/bingo-site/app/shared/middleware/httprouterwrapper"
+	"github.com/voidhofer/bingo-site/app/shared/middleware/logrequest"
+	"github.com/voidhofer/bingo-site/app/shared/session"
 
 	// external imports
 	"github.com/gorilla/context"

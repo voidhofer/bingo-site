@@ -12,13 +12,13 @@ import (
 	"runtime"
 
 	// local imports
-	"github.com/voidhofer/bingo_site/app/route"
-	"github.com/voidhofer/bingo_site/app/shared/jsonconfig"
-	"github.com/voidhofer/bingo_site/app/shared/recaptcha"
-	"github.com/voidhofer/bingo_site/app/shared/server"
-	"github.com/voidhofer/bingo_site/app/shared/session"
-	"github.com/voidhofer/bingo_site/app/shared/view"
-	"github.com/voidhofer/bingo_site/app/shared/view/plugin"
+	"github.com/voidhofer/bingo-site/app/route"
+	"github.com/voidhofer/bingo-site/app/shared/jsonconfig"
+	"github.com/voidhofer/bingo-site/app/shared/recaptcha"
+	"github.com/voidhofer/bingo-site/app/shared/server"
+	"github.com/voidhofer/bingo-site/app/shared/session"
+	"github.com/voidhofer/bingo-site/app/shared/view"
+	"github.com/voidhofer/bingo-site/app/shared/view/plugin"
 )
 
 // init sets log flags and allows more CPU core usage

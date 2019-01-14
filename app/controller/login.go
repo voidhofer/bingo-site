@@ -7,11 +7,11 @@ import (
 	"net/http"
 
 	// local imports
-	"github.com/voidhofer/bingo_site/app/model"
-	"github.com/voidhofer/bingo_site/app/shared/passhash"
-	"github.com/voidhofer/bingo_site/app/shared/recaptcha"
-	"github.com/voidhofer/bingo_site/app/shared/session"
-	"github.com/voidhofer/bingo_site/app/shared/view"
+	"github.com/voidhofer/bingo-site/app/model"
+	"github.com/voidhofer/bingo-site/app/shared/passhash"
+	"github.com/voidhofer/bingo-site/app/shared/recaptcha"
+	"github.com/voidhofer/bingo-site/app/shared/session"
+	"github.com/voidhofer/bingo-site/app/shared/view"
 
 	// external imports
 	"github.com/gorilla/sessions"

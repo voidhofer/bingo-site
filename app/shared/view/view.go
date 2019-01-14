@@ -15,7 +15,7 @@ import (
 	"time"
 
 	// local imports
-	"github.com/voidhofer/bingo_site/app/shared/session"
+	"github.com/voidhofer/bingo-site/app/shared/session"
 )
 
 func init() {
