@@ -156,12 +156,19 @@ At last in app/shared/server/server.go you can add multiple tls configurations (
 
 ## Built with:
 [Gorilla Context](github.com/gorilla/context)
+
 [Gorilla Sessions](github.com/gorilla/sessions)
+
 [Julien Schmidt's HTTP router](github.com/julienschmidt/httprouter)
+
 [Justinas's Alice - middleware chaining](github.com/justinas/alice)
+
 [Joseph Spurrier's CSRFbanana](github.com/josephspurrier/csrfbanana)
+
 [Haisum's implementation of Google recaptcha](github.com/haisum/recaptcha)
 
+
 ## Acknowledgments: 
-This project is my implementation of Joseph Spurrier's golang webapp.
+This project was inspired by Joseph Spurrier's blog post about creating Go web applications.
+I used some of his packages and change them a little bit so they fit my needs. I would suggest you all to read his article and take a look at his github because he did an excelent job explaining his concept of golang web development.
 [Joseph Spurrier's blog post - Go Web App Example](http://www.josephspurrier.com/go-web-app-example/)
