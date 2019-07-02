@@ -58,7 +58,7 @@ chmod +x ./bingo-site
 ```
 
 ## Running on Windows:
-You might need to run as administrator priviledges.
+You might need to run it with administrator priviledges.
 
 ## Running on OS X:
 You should add execution permission to the executable just like linux users.
